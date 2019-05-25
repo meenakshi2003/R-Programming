@@ -1,4 +1,5 @@
 # Cache the Inverse of a Matrix
+# Store matrix 
 makeCacheMatrix <- function(x = matrix()) {
   invr <- NULL
   set <- function(y) {
@@ -12,7 +13,8 @@ makeCacheMatrix <- function(x = matrix()) {
 }
 #makeCacheMatrix
 
-#Cachce to Solve
+#Cache to Solve 
+# Condition check implemented To retain the inverse from Cache
 cacheSolve <- function(x, ...) {
   invr <- x$getInvr()
   if (!is.null(invr)) {
