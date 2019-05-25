@@ -1,14 +1,43 @@
-setwd("D:/00 Important/10 YORBIT/201 R")
-source("201_R_W3.R")
-d_mat <- makeCacheMatrix(matrix(1:4, 2, 2))
-d_mat$get()
-d_mat$getInvr()
-cacheSolve(d_mat)
-cacheSolve(d_mat)
-d_mat$getInvr()
-d_mat$set(matrix(c(2, 2, 1, 4), 2, 2))
-d_mat$get()
-d_mat$getInvr()
-cacheSolve(d_mat)
-cacheSolve(d_mat)
-d_mat$getInvr()
+> setwd("D:/00 Important/10 YORBIT/201 R")
+> source("201_R_W3.R")
+> d_mat <- makeCacheMatrix(matrix(15:18, 2, 2))
+> d_mat$get()
+     [,1] [,2]
+[1,]   15   17
+[2,]   16   18
+> d_mat$getInvr()
+NULL
+> cacheSolve(d_mat)
+     [,1] [,2]
+[1,]   -9  8.5
+[2,]    8 -7.5
+> cacheSolve(d_mat)
+Cached data processing..
+     [,1] [,2]
+[1,]   -9  8.5
+[2,]    8 -7.5
+> d_mat$getInvr()
+     [,1] [,2]
+[1,]   -9  8.5
+[2,]    8 -7.5
+> d_mat$set(matrix(c(16, 17, 16, 15), 2, 2))
+> d_mat$get()
+     [,1] [,2]
+[1,]   16   16
+[2,]   17   15
+> d_mat$getInvr()
+NULL
+> cacheSolve(d_mat)
+         [,1] [,2]
+[1,] -0.46875  0.5
+[2,]  0.53125 -0.5
+> cacheSolve(d_mat)
+Cached data processing..
+         [,1] [,2]
+[1,] -0.46875  0.5
+[2,]  0.53125 -0.5
+> d_mat$getInvr()
+         [,1] [,2]
+[1,] -0.46875  0.5
+[2,]  0.53125 -0.5
+> 
