@@ -10,7 +10,7 @@ makeCacheMatrix <- function(x = matrix()) {
   getInvr <- function() invr
   list(set = set, get = get, setInvr = setInvr, getInvr = getInvr)
 }
-
+#makeCacheMatrix
 
 #Cachce to Solve
 cacheSolve <- function(x, ...) {
@@ -24,3 +24,4 @@ cacheSolve <- function(x, ...) {
   x$setInvr(invr)
   invr
 }
+#cacheSolve
